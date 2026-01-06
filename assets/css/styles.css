@@ -527,12 +527,15 @@ button:hover{opacity:.9}
 
 /* Masonry Featured (packs featured images, no gaps) */
 .masonry-featured{
-  column-count: 2;
+  column-count: 3;      /* match .masonry-grid */
   column-gap: 14px;
   margin-bottom: 18px;
 }
 @media (max-width: 920px){
-  .masonry-featured{ column-count: 1; }
+  .masonry-featured{ column-count: 2; }  /* match .masonry-grid */
+}
+@media (max-width: 520px){
+  .masonry-featured{ column-count: 1; }  /* match .masonry-grid */
 }
 .masonry-featured .m-item{
   margin-bottom: 14px;
