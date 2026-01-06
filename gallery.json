@@ -463,6 +463,18 @@
           "category": "Featured"
         },
         {
+          "src": "assets/gallery/full/ND_NYC'25-117.jpg",
+          "thumb": "assets/gallery/thumb/ND_NYC'25-117.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/ND_NYC'25-120.jpg",
+          "thumb": "assets/gallery/thumb/ND_NYC'25-120.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
           "src": "assets/gallery/full/ND_NYC'25-149.jpg",
           "thumb": "assets/gallery/thumb/ND_NYC'25-149.jpg",
           "alt": "Kram Studios",
@@ -495,6 +507,12 @@
         {
           "src": "assets/gallery/full/ND_NYC'25-165.jpg",
           "thumb": "assets/gallery/thumb/ND_NYC'25-165.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/ND_NYC'25-166.jpg",
+          "thumb": "assets/gallery/thumb/ND_NYC'25-166.jpg",
           "alt": "Kram Studios",
           "category": "Featured"
         },
