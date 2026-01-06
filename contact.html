@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact | Kram Studios</title>
+  <meta name="description" content="Contact Kram Studios for weddings, events, couples, family, portraits."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Kram Studios</a>
+    <div class="menu">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="portfolio.html">Portfolio</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="contact.html">Contact</a>
+      <a class="disabled" href="#" title="Coming soon">Booking</a>
+      <a class="disabled" href="#" title="Coming soon">Testimonials</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p class="muted">Share your date, location, and what you’re looking for.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="info-block">
+        <h3>Details</h3>
+        <p>
+          Email: <a href="mailto:smaranam.studio@gmail.com">smaranam.studio@gmail.com</a><br/>
+          Instagram: <a href="https://www.instagram.com/kram_studios/" target="_blank" rel="noopener">@kram_studios</a><br/>
+          <span class="muted">Located in VA — shoots anywhere in the US</span>
+        </p>
+
+        <div class="hr"></div>
+
+        <h3>Services</h3>
+        <ul class="list-inline" aria-label="Services">
+          <li>Weddings</li><li>Events</li><li>Couples</li><li>Family</li><li>Portraits</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <p class="muted">
+          Booking and Testimonials pages are reserved in the navigation and will be added soon.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:1.5rem;margin-bottom:10px">Inquiry form</h3>
+        <form id="contactForm">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" required name="name" placeholder="Your name"/>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" required type="email" name="email" placeholder="you@email.com"/>
+          </div>
+          <div class="field">
+            <label for="location">Location</label>
+            <input id="location" name="location" placeholder="City / State"/>
+          </div>
+          <div class="field">
+            <label for="date">Date</label>
+            <input id="date" name="date" placeholder="Optional"/>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" required name="message" rows="6" placeholder="Tell us what you're planning…"></textarea>
+          </div>
+          <button type="submit">Send</button>
+          <div style="margin-top:12px" class="muted">
+            Publishing note: when we publish, we can enable a free form backend (Netlify Forms) so this submits without email.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div>© <span id="year"></span> Kram Studios</div>
+      <div class="muted">Located in VA — shoots anywhere in the US</div>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div><a href="mailto:smaranam.studio@gmail.com">smaranam.studio@gmail.com</a></div>
+      <div><a href="https://www.instagram.com/kram_studios/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script>
+  const emailTo = "smaranam.studio@gmail.com";
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const body = [
+      `Name: ${fd.get('name')}`,
+      `Email: ${fd.get('email')}`,
+      `Location: ${fd.get('location')||''}`,
+      `Date: ${fd.get('date')||''}`,
+      '',
+      (fd.get('message')||'')
+    ].join('\n');
+    const url = `mailto:${emailTo}?subject=${encodeURIComponent('Kram Studios Inquiry')}&body=${encodeURIComponent(body)}`;
+    window.location.href = url;
+  });
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

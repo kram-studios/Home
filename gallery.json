@@ -1,0 +1,1008 @@
+{
+  "brand": "Kram Studios",
+  "service_area": "Located in VA \u2014 shoots anywhere in the US",
+  "categories": [
+    {
+      "name": "Featured",
+      "slug": "featured",
+      "photos": [
+        {
+          "src": "assets/gallery/full/Amitha-220.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-220.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-26.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-26.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-372.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-372.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-420.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-420.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-546.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-546.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-631.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-631.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-632.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-632.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-633.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-633.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-76.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-76.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-88.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-88.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Amitha-98.jpg",
+          "thumb": "assets/gallery/thumb/Amitha-98.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-141.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-141.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-148.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-148.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-192.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-192.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-253.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-253.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-3.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-3.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-37.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-37.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-53.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-53.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-67.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-67.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ananya's Fall Shoot-76.jpg",
+          "thumb": "assets/gallery/thumb/Ananya's Fall Shoot-76.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Deepshika's Grad-108.jpg",
+          "thumb": "assets/gallery/thumb/Deepshika's Grad-108.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Deepshika's Grad-109.jpg",
+          "thumb": "assets/gallery/thumb/Deepshika's Grad-109.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Deepshika's Grad-191.jpg",
+          "thumb": "assets/gallery/thumb/Deepshika's Grad-191.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Deepshika's Grad-329.jpg",
+          "thumb": "assets/gallery/thumb/Deepshika's Grad-329.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Deepshika's Grad-80.jpg",
+          "thumb": "assets/gallery/thumb/Deepshika's Grad-80.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-174.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-174.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-25.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-25.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-328.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-328.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-35.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-35.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-38.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-38.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Falguni & Sanjeev's 60th B'Day-70.jpg",
+          "thumb": "assets/gallery/thumb/Falguni & Sanjeev's 60th B'Day-70.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025 n-2.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025 n-2.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025 n.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025 n.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025 nn-2.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025 nn-2.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025 nn.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025 nn.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-15.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-15.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-16.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-16.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-17.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-17.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-2.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-2.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-24.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-24.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-25.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-25.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-26.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-26.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-4.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-4.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-7.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-7.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/GMU 2025-9.jpg",
+          "thumb": "assets/gallery/thumb/GMU 2025-9.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-136.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-136.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-154.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-154.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-326.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-326.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-33.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-33.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-37.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-37.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-66.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-66.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-81.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-81.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Girish's 50th B'Day-91.jpg",
+          "thumb": "assets/gallery/thumb/Girish's 50th B'Day-91.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Jyothi-3.jpg",
+          "thumb": "assets/gallery/thumb/Jyothi-3.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Jyothi-6.jpg",
+          "thumb": "assets/gallery/thumb/Jyothi-6.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Jyothi-9.jpg",
+          "thumb": "assets/gallery/thumb/Jyothi-9.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-17.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-17.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-194.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-194.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-23.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-23.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-372.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-372.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-407.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-407.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Keerthana's Seemantham-70.jpg",
+          "thumb": "assets/gallery/thumb/Keerthana's Seemantham-70.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-10.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-10.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-11.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-11.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-122.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-122.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-13.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-13.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-14.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-14.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-15.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-15.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-152.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-152.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-153.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-153.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-16.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-16.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-181.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-181.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-201.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-201.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-5.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-5.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-63.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-63.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Mawaddah's 1st B'Day-7.jpg",
+          "thumb": "assets/gallery/thumb/Mawaddah's 1st B'Day-7.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ram & Bhagyashri VA Visit-1.jpg",
+          "thumb": "assets/gallery/thumb/Ram & Bhagyashri VA Visit-1.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Ram & Bhagyashri VA Visit-30.jpg",
+          "thumb": "assets/gallery/thumb/Ram & Bhagyashri VA Visit-30.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-102.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-102.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-105.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-105.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-106.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-106.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-151.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-151.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-152.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-152.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-153.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-153.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-156.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-156.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-160.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-160.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-161.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-161.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-162.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-162.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-166.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-166.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-168.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-168.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-174.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-174.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-175.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-175.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-177.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-177.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-178.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-178.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-255.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-255.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-318.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-318.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-69.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-69.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-71.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-71.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Reet's SW-16-98.jpg",
+          "thumb": "assets/gallery/thumb/Reet's SW-16-98.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-114.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-114.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-140.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-140.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-144.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-144.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-38.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-38.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-388.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-388.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-68.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-68.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-86.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-86.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Richa's 40th B'Day-98.jpg",
+          "thumb": "assets/gallery/thumb/Richa's 40th B'Day-98.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-110.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-110.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-191.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-191.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-196.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-196.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-198.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-198.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-217.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-217.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-266.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-266.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-30.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-30.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-399.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-399.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-433.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-433.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-460.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-460.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-461.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-461.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-483.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-483.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-486.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-486.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-489.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-489.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-66.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-66.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-75.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-75.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-84.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-84.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Samarth's Grad-99.jpg",
+          "thumb": "assets/gallery/thumb/Samarth's Grad-99.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-13.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-13.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-141.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-141.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-270.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-270.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-318.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-318.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-388.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-388.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-390.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-390.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-394.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-394.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-495.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-495.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-496.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-496.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Saumya's Diwali Party-74.jpg",
+          "thumb": "assets/gallery/thumb/Saumya's Diwali Party-74.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Tejal-198.jpg",
+          "thumb": "assets/gallery/thumb/Tejal-198.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Tejal-56.jpg",
+          "thumb": "assets/gallery/thumb/Tejal-56.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Tejal-74.jpg",
+          "thumb": "assets/gallery/thumb/Tejal-74.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Tejal-78.jpg",
+          "thumb": "assets/gallery/thumb/Tejal-78.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Tejal-79.jpg",
+          "thumb": "assets/gallery/thumb/Tejal-79.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-110.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-110.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-115.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-115.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-124.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-124.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-145.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-145.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-147.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-147.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-220.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-220.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-243.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-243.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-245.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-245.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-260.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-260.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-265.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-265.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/Vidhya_Haldi-306.jpg",
+          "thumb": "assets/gallery/thumb/Vidhya_Haldi-306.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-13.jpg",
+          "thumb": "assets/gallery/thumb/bmt-13.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-28.jpg",
+          "thumb": "assets/gallery/thumb/bmt-28.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-32.jpg",
+          "thumb": "assets/gallery/thumb/bmt-32.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-35.jpg",
+          "thumb": "assets/gallery/thumb/bmt-35.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-43.jpg",
+          "thumb": "assets/gallery/thumb/bmt-43.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bmt-46.jpg",
+          "thumb": "assets/gallery/thumb/bmt-46.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bwbmt (1).jpg",
+          "thumb": "assets/gallery/thumb/bwbmt (1).jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bwbmt-2.jpg",
+          "thumb": "assets/gallery/thumb/bwbmt-2.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/bwbmt-4.jpg",
+          "thumb": "assets/gallery/thumb/bwbmt-4.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/ram-bhagyashri-va-visit-1.jpg",
+          "thumb": "assets/gallery/thumb/ram-bhagyashri-va-visit-1.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/ram-bhagyashri-va-visit-21.jpg",
+          "thumb": "assets/gallery/thumb/ram-bhagyashri-va-visit-21.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/ram-bhagyashri-va-visit-30.jpg",
+          "thumb": "assets/gallery/thumb/ram-bhagyashri-va-visit-30.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/sdg-17.jpg",
+          "thumb": "assets/gallery/thumb/sdg-17.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/sdg-58.jpg",
+          "thumb": "assets/gallery/thumb/sdg-58.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
+          "src": "assets/gallery/full/sdg-59.jpg",
+          "thumb": "assets/gallery/thumb/sdg-59.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        }
+      ]
+    }
+  ]
+}

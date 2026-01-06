@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Kram Studios | Cherish Now. Relive Forever.</title>
+  <meta name="description" content="Kram Studios captures natural, people-focused photography and films — based in VA, available anywhere in the US."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Kram Studios</a>
+    <div class="menu">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="portfolio.html">Portfolio</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="contact.html">Contact</a>
+      <a class="disabled" href="#" title="Coming soon">Booking</a>
+      <a class="disabled" href="#" title="Coming soon">Testimonials</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-carousel" aria-label="Featured photos wheel">
+      <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
+      <div class="hero-nav" aria-hidden="false">
+        <button class="hero-btn prev" type="button" data-hero-prev aria-label="Previous">‹</button>
+        <button class="hero-btn next" type="button" data-hero-next aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <div class="kicker">Photography • Films • People-first storytelling</div>
+      <h1 class="h1">Cherish Now. Relive Forever.</h1>
+      <p class="lead">We capture weddings, events, families, couples, and portraits with a simple approach: keep it natural, keep it honest, and make it feel like you. <span class="meta-line"><b>Located in VA</b>, shoots anywhere in the <b>US</b>.</span></p>
+
+      <div class="actions">
+        <a class="action-link" href="portfolio.html">View Portfolio</a>
+        <a class="action-link secondary" href="contact.html">Inquire</a>
+      </div>
+
+      <ul class="list-inline" aria-label="Offerings">
+        <li>Weddings</li>
+        <li>Events</li>
+        <li>Couples</li>
+        <li>Family</li>
+        <li>Portraits</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>What we do</h2>
+      <p>Natural direction, honest moments, clean portraits.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="info-block">
+        <h3>Photography</h3>
+        <p>Real expressions, clean composition, and the details that bring your day back to life.</p>
+        <div style="margin-top:10px"><a class="action-link" href="portfolio.html">See photos</a></div>
+      </div>
+
+      <div class="info-block">
+        <h3>Films</h3>
+        <p>Movement, voices, reactions, and atmosphere—so it doesn’t just show what happened, it reminds you what it felt like.</p>
+        <div style="margin-top:10px"><span class="muted">Films coming soon.</span></div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="two-col">
+      <div class="info-block">
+        <h3>Based in VA. Shoots anywhere in the US.</h3>
+        <p>Share your date, location, and what you’re planning. We’ll take it from there.</p>
+        <div style="margin-top:10px"><a class="action-link" href="contact.html">Contact</a></div>
+      </div>
+      <div class="info-block">
+        <h3>What to expect</h3>
+        <p>Calm direction when needed, candid storytelling always, and the must-have portraits and group photos everyone wants.</p>
+        <ul class="list-inline" aria-label="Experience">
+          <li>Natural guidance</li>
+          <li>Candid moments</li>
+          <li>Clean portraits</li>
+          <li>True-to-life edits</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div>© <span id="year"></span> Kram Studios</div>
+      <div class="muted">Located in VA — shoots anywhere in the US</div>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div><a href="mailto:smaranam.studio@gmail.com">smaranam.studio@gmail.com</a></div>
+      <div><a href="https://www.instagram.com/kram_studios/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/hero-carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portfolio | Kram Studios</title>
+  <meta name="description" content="Kram Studios Portfolio — weddings, events, couples, family, portraits."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Kram Studios</a>
+    <div class="menu">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="portfolio.html">Portfolio</a>
+      <a data-nav href="about.html">About</a>
+      <a data-nav href="contact.html">Contact</a>
+      <a class="disabled" href="#" title="Coming soon">Booking</a>
+      <a class="disabled" href="#" title="Coming soon">Testimonials</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p class="muted">Sample images for now — full galleries next.</p>
+    </div>
+    <div class="masonry-featured" id="featuredGrid" aria-label="Featured photos"></div>
+    <div class="masonry-grid" id="photoGrid" aria-label="Photo grid"></div>
+    <div class="load-more-wrap"><button class="load-more" id="loadMoreBtn" type="button">Load more</button></div>
+  </div>
+</section>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lb-inner">
+    <div class="lb-top">
+      <div id="lbCount">1 / 1</div>
+      <button class="iconbtn" data-lb-close aria-label="Close">✕</button>
+    </div>
+    <div class="lb-panel">
+      <img id="lbImg" alt=""/>
+    </div>
+    <div class="lb-controls">
+      <button class="iconbtn" data-lb-prev aria-label="Previous">‹</button>
+      <button class="iconbtn" data-lb-next aria-label="Next">›</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div>© <span id="year"></span> Kram Studios</div>
+      <div class="muted">Located in VA — shoots anywhere in the US</div>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div><a href="mailto:smaranam.studio@gmail.com">smaranam.studio@gmail.com</a></div>
+      <div><a href="https://www.instagram.com/kram_studios/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>
