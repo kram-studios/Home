@@ -7,6 +7,12 @@
       "slug": "featured",
       "photos": [
         {
+          "src": "assets/gallery/full/5525 2.jpg",
+          "thumb": "assets/gallery/thumb/5525 2.jpg",
+          "alt": "Kram Studios",
+          "category": "Featured"
+        },
+        {
           "src": "assets/gallery/full/Amitha-220.jpg",
           "thumb": "assets/gallery/thumb/Amitha-220.jpg",
           "alt": "Kram Studios",
