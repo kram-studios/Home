@@ -385,58 +385,42 @@ a:hover{opacity:.92}
 }
 
 /* -------------------------
-   STORY
+   STORY (single column)
    ------------------------- */
 .home-story{
-  padding: 40px 0 56px;
+  padding: 56px 0 64px;
 }
-.story-grid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 28px;
-  align-items:start;
+
+.story-wrap{
+  max-width: 86ch;     /* readable line length */
+  margin: 0 auto;      /* centered block */
+  text-align: left;
 }
-@media (max-width:920px){ .story-grid{grid-template-columns:1fr} }
 
 .story-title{
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-size: clamp(2.0rem, 3.2vw, 2.8rem);
   line-height: 1.08;
+  margin-bottom: 14px;
 }
+
 .story-prose p{
   margin: 0 0 14px;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.06rem;
+  line-height: 1.8;
 }
-.story-prose p:last-child{margin-bottom:0}
 
-.story-aside{
-  border-left: 1px solid var(--line);
-  padding-left: 18px;
+.story-prose p:last-of-type{
+  margin-bottom: 18px;
 }
-@media (max-width:920px){
-  .story-aside{
-    border-left:0;
-    padding-left:0;
-    border-top:1px solid var(--line);
-    padding-top:18px;
-  }
+
+.actions{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items:center;
 }
-.aside-kicker{
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-size:.75rem;
-  color: var(--muted);
-}
-.aside-list{
-  margin: 12px 0 0;
-  padding: 0;
-  list-style:none;
-  color: var(--muted);
-  display:grid;
-  gap: 10px;
-}
-.aside-list li b{color: var(--text); font-weight:600}
+
 
 /* -------------------------
    Portfolio masonry (used on portfolio page)
