@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Kram Studios | Cherish Now. Relive Forever.</title>
+  <title>Kram Studios</title>
   <meta name="description" content="Kram Studios captures natural, people-focused photography and films — based in VA, available anywhere in the US."/>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,75 +26,77 @@
   </div>
 </div>
 
-<section class="hero">
-  <div class="container">
+<!-- HOME HERO (Catchmotion-inspired overlay) -->
+<section class="home-hero" aria-label="Home hero">
+  <div class="hero-stage">
     <div class="hero-carousel" aria-label="Featured photos wheel">
       <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
+
       <div class="hero-nav" aria-hidden="false">
         <button class="hero-btn prev" type="button" data-hero-prev aria-label="Previous">‹</button>
         <button class="hero-btn next" type="button" data-hero-next aria-label="Next">›</button>
       </div>
     </div>
 
-    <div class="hero-copy">
-      <div class="kicker">Photography • Films • People-first storytelling</div>
-      <h1 class="h1">Cherish Now. Relive Forever.</h1>
-      <p class="lead">We capture weddings, events, families, couples, and portraits with a simple approach: keep it natural, keep it honest, and make it feel like you. <span class="meta-line"><b>Located in VA</b>, shoots anywhere in the <b>US</b>.</span></p>
+    <!-- Overlay copy -->
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-overlay-inner">
+          <div class="hero-wordmark">Kram Studios</div>
 
-      <div class="actions">
-        <a class="action-link" href="portfolio.html">View Portfolio</a>
-        <a class="action-link secondary" href="contact.html">Inquire</a>
+          <!-- Hero text line (your “for the …” line) -->
+          <div class="hero-tag">for the hugs, kisses, smiles &amp; overjoyed tears</div>
+
+          <!-- Small supporting line -->
+          <div class="hero-subline">Photography • Films • Based in VA — shoots anywhere in the US</div>
+
+          <p class="hero-lead">
+            Natural, people-first storytelling with clean portraits and real moments — captured calmly, honestly, and beautifully.
+          </p>
+
+          <div class="hero-actions">
+            <a class="hero-cta" href="contact.html">Contact</a>
+            <a class="hero-cta secondary" href="portfolio.html">Portfolio</a>
+          </div>
+
+          <a class="deep-dive" href="#showcase">Deep dive</a>
+        </div>
       </div>
-
-      <ul class="list-inline" aria-label="Offerings">
-        <li>Weddings</li>
-        <li>Events</li>
-        <li>Couples</li>
-        <li>Family</li>
-        <li>Portraits</li>
-      </ul>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- SHOWCASE -->
+<section class="showcase" id="showcase" aria-label="Showcase">
   <div class="container">
-    <div class="section-title">
-      <h2>What we do</h2>
-      <p>Natural direction, honest moments, clean portraits.</p>
+    <div class="showcase-head">
+      <h2>The Showcase</h2>
+      <p class="muted">Sample images for now — full galleries next.</p>
     </div>
 
-    <div class="flow-grid">
-      <div class="info-block">
-        <h3>Photography</h3>
-        <p>Real expressions, clean composition, and the details that bring your day back to life.</p>
-        <div style="margin-top:10px"><a class="action-link" href="portfolio.html">See photos</a></div>
-      </div>
+    <div class="showcase-grid" id="showcaseGrid" aria-label="Showcase photos"></div>
+  </div>
+</section>
 
-      <div class="info-block">
-        <h3>Films</h3>
-        <p>Movement, voices, reactions, and atmosphere—so it doesn’t just show what happened, it reminds you what it felt like.</p>
-        <div style="margin-top:10px"><span class="muted">Films coming soon.</span></div>
-      </div>
-    </div>
+<!-- HOME STORY (simple, fluid) -->
+<section class="home-story" aria-label="Home story">
+  <div class="container">
+    <div class="story-prose">
+      <p>
+        The best moments don’t announce themselves. A quiet tear. A hand squeeze. A laugh that takes over the room.
+        We look for the real connections — and we make sure you also get the clean portraits and group photos everyone wants.
+      </p>
+      <p>
+        We capture weddings, events, families, couples, and portraits with a simple approach: keep it natural, keep it honest,
+        and make it feel like you.
+      </p>
 
-    <div class="hr"></div>
+      <div class="service-line"><b>Weddings</b> • Events • Family • Couples • Portraits</div>
 
-    <div class="flow-grid">
-      <div class="info-block">
-        <h3>Based in VA. Shoots anywhere in the US.</h3>
-        <p>Share your date, location, and what you’re planning. We’ll take it from there.</p>
-        <div style="margin-top:10px"><a class="action-link" href="contact.html">Contact</a></div>
-      </div>
-      <div class="info-block">
-        <h3>What to expect</h3>
-        <p>Calm direction when needed, candid storytelling always, and the must-have portraits and group photos everyone wants.</p>
-        <ul class="list-inline" aria-label="Experience">
-          <li>Natural guidance</li>
-          <li>Candid moments</li>
-          <li>Clean portraits</li>
-          <li>True-to-life edits</li>
-        </ul>
+      <div style="margin-top:12px">
+        <a class="action-link" href="portfolio.html">View Portfolio</a>
+        <span style="display:inline-block;width:18px"></span>
+        <a class="action-link secondary" href="contact.html">Contact</a>
       </div>
     </div>
   </div>
@@ -112,9 +114,55 @@
     </div>
   </div>
 </div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Build the "Showcase" from the hero carousel list (first 9)
+  // hero-carousel.js will set window.KRAM_HERO_LIST = [{src, alt}, ...]
+  (function buildShowcase(){
+    const grid = document.getElementById('showcaseGrid');
+    if (!grid) return;
+
+    function render(list){
+      if (!Array.isArray(list) || list.length === 0) return;
+      const take = list.slice(0, 9);
+
+      grid.innerHTML = '';
+      take.forEach((p) => {
+        const a = document.createElement('a');
+        a.className = 'showcase-item';
+        a.href = 'portfolio.html';
+
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.src = p.thumb || p.src;
+        img.alt = p.alt || 'Kram Studios';
+
+        a.appendChild(img);
+        grid.appendChild(a);
+      });
+    }
+
+    // If hero list is already ready
+    if (window.KRAM_HERO_LIST && window.KRAM_HERO_LIST.length) {
+      render(window.KRAM_HERO_LIST);
+      return;
+    }
+
+    // Otherwise wait briefly for hero-carousel.js to load
+    let tries = 0;
+    const t = setInterval(() => {
+      tries++;
+      if (window.KRAM_HERO_LIST && window.KRAM_HERO_LIST.length) {
+        clearInterval(t);
+        render(window.KRAM_HERO_LIST);
+      }
+      if (tries > 40) clearInterval(t); // ~2s max
+    }, 50);
+  })();
 </script>
+
 <script src="assets/js/main.js"></script>
 <script src="assets/js/hero-carousel.js"></script>
 </body>
