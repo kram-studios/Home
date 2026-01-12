@@ -1,10 +1,10 @@
 /**
- * Hero Carousel (Single Image, Fullscreen, No Crop)
+ * Hero Carousel (Single Image, Fullscreen, Cropped to Fill)
  * - Reads carousel.txt (one filename or path per line); auto-count = number of lines
  * - If a line is just a filename, it is matched against gallery.json by basename
  * - Renders ONLY the active image (no prev/next peek)
  * - Exposes window.KRAM_HERO_LIST = [{src, thumb, alt}] so Home can build Showcase (9)
- * - Autoplays every 3 seconds; stops after user interaction
+ * - Autoplays every 3 seconds; stops ONLY after explicit user navigation (not on click)
  */
 function $(sel, el = document) { return el.querySelector(sel); }
 
@@ -106,6 +106,9 @@ async function initHeroWheel(){
 
   function mod(x, m){ return ((x % m) + m) % m; }
 
+  // autoplay control
+  let autoplay = true;
+
   function render(){
     wheel.innerHTML = "";
     const p = picks[active];
@@ -116,27 +119,43 @@ async function initHeroWheel(){
     wheel.appendChild(d);
   }
 
-  function prev(){ active = mod(active - 1, n); render(); }
-  function next(){ active = mod(active + 1, n); render(); }
+  function prev(){
+    autoplay = false;                 // <-- stop only on navigation
+    active = mod(active - 1, n);
+    render();
+  }
 
-  // Nav buttons (only show on hover via CSS). If you remove buttons from HTML, these safely no-op.
+  function next(){
+    autoplay = false;                 // <-- stop only on navigation
+    active = mod(active + 1, n);
+    render();
+  }
+
+  // Nav buttons (show on hover via CSS). If removed from HTML, safe no-op.
   $("[data-hero-prev]")?.addEventListener("click", (e) => { e.preventDefault(); prev(); });
   $("[data-hero-next]")?.addEventListener("click", (e) => { e.preventDefault(); next(); });
 
+  // Keyboard navigation should stop autoplay
   wheel.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") prev();
-    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") { prev(); }
+    if (e.key === "ArrowRight") { next(); }
   });
 
-  // autoplay; stops after user interaction
-  let autoplay = true;
-  const timer = setInterval(() => { if (autoplay) next(); }, 3000);
+  // Autoplay every 3 seconds
+  setInterval(() => {
+    if (!autoplay) return;
+    active = mod(active + 1, n);
+    render();
+  }, 3000);
 
-  ["mousedown","touchstart","wheel"].forEach(evt => {
-    wheel.addEventListener(evt, () => { autoplay = false; }, { passive: true });
-  });
+  // IMPORTANT CHANGE:
+  // Do NOT stop autoplay on click/mousedown.
+  // Stop autoplay only on explicit "navigation intent" interactions.
 
-  // swipe support
+  // wheel scroll = intent
+  wheel.addEventListener("wheel", () => { autoplay = false; }, { passive: true });
+
+  // swipe support (intent)
   let startX = null;
   wheel.addEventListener("touchstart", (e) => {
     startX = e.touches?.[0]?.clientX ?? null;
@@ -146,9 +165,15 @@ async function initHeroWheel(){
     if (startX == null) return;
     const endX = e.changedTouches?.[0]?.clientX ?? startX;
     const dx = endX - startX;
+
     if (Math.abs(dx) > 36){
-      autoplay = false;
-      if (dx > 0) prev(); else next();
+      autoplay = false; // intent confirmed
+      if (dx > 0) {
+        active = mod(active - 1, n);
+      } else {
+        active = mod(active + 1, n);
+      }
+      render();
     }
     startX = null;
   }, { passive: true });
@@ -159,4 +184,3 @@ async function initHeroWheel(){
 document.addEventListener("DOMContentLoaded", () => {
   initHeroWheel();
 });
-

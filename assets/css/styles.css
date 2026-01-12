@@ -153,7 +153,46 @@ a:hover{opacity:.92}
 }
 
 /* Ensure hero overlay text always sits above the overlay */
-.hero-overlay{ z-index: 10; }
+/* Ensure hero overlay text always sits above the image + overlay */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:10;
+
+  display:flex;
+  align-items:center;      /* vertical center */
+  justify-content:center;  /* horizontal center */
+
+  pointer-events:none;
+  text-align:center;
+}
+
+.hero-overlay .container{width:100%}
+
+.hero-overlay-inner{
+  pointer-events:auto;
+
+  max-width: 980px;
+  margin: 0 auto;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+
+  color:#fff;
+
+  /* keep your glass plate */
+  padding: 26px 26px;
+  border-radius: 18px;
+  background: rgba(0,0,0,.26);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+.hero-wheel{ position:relative; z-index:1; }
+.hero-stage::after{ z-index:6; }  /* you already set z-index:6; keep it */
 
 /* Make text pop more */
 .hero-wordmark,
