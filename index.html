@@ -33,10 +33,11 @@
       <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
     </div>
 
+    <!-- Overlay copy -->
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-overlay-inner">
-          <div class="hero-wordmark">Kram Studios</div>
+          <div class="hero-wordmark">KRAM STUDIOS</div>
           <div class="hero-tag">for the hugs, kisses, smiles &amp; overjoyed tears</div>
           <div class="hero-subline">Photography • Films • Virginia-based, available nationwide</div>
         </div>
@@ -52,6 +53,7 @@
       <div class="intro-text">
         Natural, people-first storytelling with clean portraits and real moments - captured calmly, honestly, and beautifully.
       </div>
+
       <div class="intro-actions">
         <a class="action-link" href="contact.html">Contact</a>
         <a class="action-link secondary" href="portfolio.html">Portfolio</a>
@@ -61,19 +63,22 @@
   </div>
 </section>
 
-<!-- SHOWCASE (CatchMotion-style carousel) -->
+<!-- SHOWCASE -->
 <section class="showcase" id="showcase" aria-label="Showcase">
   <div class="container">
     <div class="showcase-head">
       <h2>A Small Selection</h2>
       <p class="muted">A few frames to start — full galleries arriving soon.</p>
     </div>
+  </div>
 
-    <div class="showcase-carousel" aria-label="Showcase carousel">
-      <button class="showcase-nav prev" type="button" aria-label="Scroll left" data-showcase-prev>‹</button>
-      <div class="showcase-track" id="showcaseTrack" aria-label="Showcase photos"></div>
-      <button class="showcase-nav next" type="button" aria-label="Scroll right" data-showcase-next>›</button>
-    </div>
+  <!-- Full-bleed carousel like CatchMotion -->
+  <div class="showcase-carousel" aria-label="Showcase carousel">
+    <button class="showcase-nav prev" type="button" aria-label="Scroll left">‹</button>
+
+    <div class="showcase-track" id="showcaseTrack" aria-label="Showcase photos"></div>
+
+    <button class="showcase-nav next" type="button" aria-label="Scroll right">›</button>
   </div>
 </section>
 
@@ -96,9 +101,8 @@
             The goal is simple: when you look back, you don’t just remember what it looked like—you remember what it felt like.
           </p>
 
-          <div style="margin-top:12px">
+          <div class="actions" style="margin-top:12px">
             <a class="action-link" href="portfolio.html">View Portfolio</a>
-            <span style="display:inline-block;width:18px"></span>
             <a class="action-link secondary" href="contact.html">Contact</a>
           </div>
         </div>
@@ -134,7 +138,9 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ----- Showcase Carousel (from featured.txt, ALL images) -----
+  // ----------------------------
+  // Showcase: build from featured.txt (ALL items), keep portrait/landscape naturally
+  // ----------------------------
   function normalizeLine(s){ return (s || "").trim(); }
   function isCommentOrEmpty(s){ return !s || s.startsWith("#") || s.startsWith("//"); }
   function basename(p){ return (p || "").split("/").pop(); }
@@ -173,32 +179,38 @@
     };
   }
 
-  function bindShowcaseNav(track){
-    const prevBtn = document.querySelector("[data-showcase-prev]");
-    const nextBtn = document.querySelector("[data-showcase-next]");
-    if (!track || !prevBtn || !nextBtn) return;
-
-    function scrollByTiles(dir){
-      const tile = track.querySelector(".showcase-tile");
-      if (!tile){
-        track.scrollBy({ left: dir * track.clientWidth * 0.9, behavior: "smooth" });
-        return;
-      }
-      const tileW = tile.getBoundingClientRect().width;
-      const styles = getComputedStyle(track);
-      const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
-      const step = (tileW + gap) * 2; // move ~2 tiles per click (CatchMotion-ish)
-      track.scrollBy({ left: dir * step, behavior: "smooth" });
-    }
-
-    prevBtn.addEventListener("click", () => scrollByTiles(-1));
-    nextBtn.addEventListener("click", () => scrollByTiles(1));
-  }
-
-  // ✅ Build showcase from featured.txt (ALL)
   (async function buildShowcaseFromFeatured(){
-    const track = document.getElementById("showcaseTrack");
+    const track = document.getElementById('showcaseTrack');
     if (!track) return;
+
+    // arrows
+    const prevBtn = document.querySelector('.showcase-nav.prev');
+    const nextBtn = document.querySelector('.showcase-nav.next');
+
+    function scrollByAmount(dir){
+      const amt = Math.max(360, Math.floor(track.clientWidth * 0.85));
+      track.scrollBy({ left: dir * amt, behavior: 'smooth' });
+    }
+    prevBtn?.addEventListener('click', () => scrollByAmount(-1));
+    nextBtn?.addEventListener('click', () => scrollByAmount( 1));
+
+    // optional: drag-to-scroll (desktop)
+    let isDown = false, startX = 0, startLeft = 0;
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX;
+      startLeft = track.scrollLeft;
+      track.classList.add('is-dragging');
+    });
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('is-dragging');
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const dx = e.pageX - startX;
+      track.scrollLeft = startLeft - dx;
+    });
 
     let gallery;
     try {
@@ -247,14 +259,13 @@
 
       const img = document.createElement("img");
       img.loading = "lazy";
+      img.decoding = "async";
       img.src = p.thumb || p.src;
       img.alt = p.alt || "Kram Studios";
 
       a.appendChild(img);
       track.appendChild(a);
     });
-
-    bindShowcaseNav(track);
   })();
 </script>
 
