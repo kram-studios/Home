@@ -256,7 +256,7 @@ a:hover{opacity:.92}
 /* Calligraphy quote Great Vibes*/
 .intro-quote{
   font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.8rem);
   line-height: 1.25;
   letter-spacing: .01em;
   color: var(--text);
