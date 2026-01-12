@@ -255,10 +255,10 @@ a:hover{opacity:.92}
 }
 
 /* -------------------------
-   SHOWCASE (Carousel strip, 12 visible, square)
+   SHOWCASE (CatchMotion-style carousel)
    ------------------------- */
 .showcase{
-  padding: 26px 0 10px;
+  padding: 34px 0 10px;
 }
 
 .showcase-head{
@@ -267,104 +267,82 @@ a:hover{opacity:.92}
   align-items:flex-end;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
-.showcase-head h2{font-size:1.85rem}
+.showcase-head h2{font-size:2.0rem}
 
+/* Carousel wrapper */
 .showcase-carousel{
   position: relative;
 }
 
-/* Fade edges */
-.showcase-carousel::before,
-.showcase-carousel::after{
-  content:"";
-  position:absolute;
-  top:0; bottom:0;
-  width: 44px;
-  pointer-events:none;
-  z-index: 2;
-}
-.showcase-carousel::before{
-  left:0;
-  background: linear-gradient(to right, var(--bg), rgba(255,255,255,0));
-}
-.showcase-carousel::after{
-  right:0;
-  background: linear-gradient(to left, var(--bg), rgba(255,255,255,0));
-}
-
+/* Horizontal “filmstrip” */
 .showcase-track{
-  --show-cols: 12;
-  --show-gap: 8px;
-
   display:flex;
-  gap: var(--show-gap);
-  overflow-x:auto;
-  overflow-y:hidden;
+  gap: 14px;
+
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 
-  padding: 2px 46px 12px;
-  margin: 0;
+  /* space so arrows don’t cover tiles */
+  padding: 6px 58px 10px;
 
-  scrollbar-width: none;
+  /* hide scrollbar */
+  scrollbar-width: none;          /* Firefox */
 }
-.showcase-track::-webkit-scrollbar{ display:none; }
+.showcase-track::-webkit-scrollbar{ display:none; } /* Chrome/Safari */
 
-.showcase-item{
-  flex: 0 0 calc((100% - (var(--show-gap) * (var(--show-cols) - 1))) / var(--show-cols));
+/* BIG tiles (this is what fixes “too small”) */
+.showcase-tile{
+  flex: 0 0 auto;
+  width: clamp(260px, 22vw, 360px);  /* ✅ big like CatchMotion */
   scroll-snap-align: start;
   display:block;
-  cursor:pointer;
 }
 
-.showcase-item img{
+.showcase-tile img{
   width:100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;          /* ✅ CatchMotion-like portrait tiles */
+  height: auto;
   object-fit: cover;
   display:block;
-  transition: opacity .25s ease, transform .25s ease;
+  transition: opacity .25s ease;
 }
-.showcase-item:hover img{
-  opacity:.94;
-  transform: scale(1.01);
-}
+.showcase-tile:hover img{opacity:.92}
 
-/* Responsive columns */
-@media (max-width: 1200px){ .showcase-track{ --show-cols: 10; } }
-@media (max-width: 980px){ .showcase-track{ --show-cols: 8; } }
-@media (max-width: 820px){ .showcase-track{ --show-cols: 6; } }
-@media (max-width: 520px){ .showcase-track{ --show-cols: 3; } }
-
-/* Arrows */
+/* Nav arrows */
 .showcase-nav{
   position:absolute;
   top:50%;
   transform: translateY(-50%);
-  width:42px;height:42px;
-  border-radius:999px;
-  border:1px solid rgba(17,17,17,.18);
-  background: rgba(255,255,255,.82);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(17,17,17,.22);
+  background: rgba(255,255,255,.88);
   backdrop-filter: blur(8px);
-  color: var(--text);
   cursor:pointer;
-  z-index: 3;
+  z-index: 5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 22px;
+  line-height: 1;
+}
+.showcase-nav:hover{opacity:.92}
 
-  opacity:0;
-  pointer-events:none;
-  transition: opacity .18s ease, transform .18s ease;
+.showcase-nav.prev{ left: 8px; }
+.showcase-nav.next{ right: 8px; }
+
+/* On mobile: make arrows smaller */
+@media (max-width: 640px){
+  .showcase-track{ padding: 6px 44px 10px; }
+  .showcase-nav{ width:38px; height:38px; font-size:20px; }
+  .showcase-tile{ width: clamp(220px, 72vw, 320px); }
 }
-.showcase-carousel:hover .showcase-nav,
-.showcase-carousel:focus-within .showcase-nav{
-  opacity:1;
-  pointer-events:auto;
-}
-.showcase-nav:hover{
-  transform: translateY(-50%) scale(1.03);
-}
-.showcase-nav.prev{ left: 10px; }
-.showcase-nav.next{ right: 10px; }
+
 
 /* -------------------------
    STORY
