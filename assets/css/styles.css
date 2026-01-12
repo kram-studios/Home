@@ -139,46 +139,41 @@ a:hover{opacity:.92}
   display:none !important;
 }
 
-/* Overlay to improve text readability (lux gradient + vignette) */
+/* Stronger readability overlay (works on bright/white images) */
 .hero-stage::after{
   content:"";
   position:absolute;
   inset:0;
   pointer-events:none;
+  z-index: 6; /* keep it above image, below text */
   background:
-    radial-gradient(900px 520px at 50% 55%, rgba(0,0,0,.28), rgba(0,0,0,0) 60%),
-    linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0) 58%);
+    radial-gradient(1200px 700px at 50% 40%, rgba(0,0,0,.18), rgba(0,0,0,0) 55%),
+    radial-gradient(1400px 900px at 50% 50%, rgba(0,0,0,.38), rgba(0,0,0,0) 62%),
+    linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.10) 60%, rgba(0,0,0,.18));
 }
 
-/* ---- HERO TEXT: centered + aligned + luxury wordmark ---- */
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  z-index:10;
+/* Ensure hero overlay text always sits above the overlay */
+.hero-overlay{ z-index: 10; }
 
-  display:flex;
-  align-items:center;      /* vertical center */
-  justify-content:center;  /* horizontal center */
-
-  pointer-events:none;
-  text-align:center;
+/* Make text pop more */
+.hero-wordmark,
+.hero-tag,
+.hero-subline{
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.65),
+    0 14px 40px rgba(0,0,0,.55);
 }
-.hero-overlay .container{width:100%}
 
+/* OPTIONAL (most reliable): glass plate behind text */
 .hero-overlay-inner{
-  pointer-events:auto;
-
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 22px;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap: 10px;
-
-  color:#fff;
+  padding: 26px 26px;
+  border-radius: 18px;
+  background: rgba(0,0,0,.26);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.14);
 }
+
 
 .hero-wordmark{
   font-family:"Cormorant Garamond", ui-serif, Georgia, serif;
@@ -489,30 +484,81 @@ button:hover{opacity:.9}
 /* =========================
    HOME Intro band + story (lux)
    ========================= */
+
+/* ✅ UPDATED: center intro text + stack buttons under it */
 .home-intro{
   padding: 34px 0 12px;
+  text-align:center; /* center everything in this band */
 }
+
 .intro-wrap{
   display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap: 18px;
-  flex-wrap:wrap;
+  flex-direction:column;        /* stack: text then buttons */
+  align-items:center;           /* center horizontally */
+  justify-content:center;
+  gap: 16px;
+  flex-wrap:nowrap;
 }
+
 .intro-text{
   max-width: 78ch;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.75;
+  margin: 0 auto;
+  text-align:center;
 }
+
+/* ✅ Buttons under text, centered, uppercase */
 .intro-actions{
   display:flex;
-  gap: 18px;
+  flex-direction:column;        /* buttons under the text */
+  gap: 12px;
   align-items:center;
-  flex-wrap:wrap;
+  justify-content:center;
+  width:100%;
 }
+
 .intro-actions .action-link{
   pointer-events:auto;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-width: 220px;
+  padding: 12px 18px;
+
+  letter-spacing:.18em;
+  text-transform:uppercase;     /* CAPITAL letters */
+  font-size:.84rem;
+
+  border:1px solid var(--text);
+  background:transparent;
+
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.intro-actions .action-link:hover{
+  opacity:.92;
+  transform: translateY(-1px);
+}
+
+/* optional: if you use .secondary on an action-link */
+.intro-actions .action-link.secondary{
+  border-color: var(--line);
+  color: var(--text);
+}
+
+/* On bigger screens, keep them as a neat centered row */
+@media (min-width: 820px){
+  .intro-actions{
+    flex-direction:row;         /* still under text, but in a row */
+    gap: 16px;
+  }
+  .intro-actions .action-link{
+    min-width: 180px;
+  }
 }
 
 /* Luxury story section (optional if you later add .story-grid HTML) */
