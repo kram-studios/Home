@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Kram Studios</title>
-  <meta name="description" content="Kram Studios captures natural, people-focused photography and films — based in VA, available anywhere in the US."/>
+  <meta name="description" content="Kram Studios captures natural, people-focused photography and films — Virginia-based, available nationwide."/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,41 +26,38 @@
   </div>
 </div>
 
-<!-- HOME HERO (Catchmotion-inspired overlay) -->
+<!-- HOME HERO (full screen, no crop, text only) -->
 <section class="home-hero" aria-label="Home hero">
   <div class="hero-stage">
     <div class="hero-carousel" aria-label="Featured photos wheel">
       <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
-
-      <div class="hero-nav" aria-hidden="false">
-        <button class="hero-btn prev" type="button" data-hero-prev aria-label="Previous">‹</button>
-        <button class="hero-btn next" type="button" data-hero-next aria-label="Next">›</button>
-      </div>
+      <!-- no hero buttons -->
     </div>
 
-    <!-- Overlay copy -->
+    <!-- Overlay copy (ONLY these 3 lines) -->
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-overlay-inner">
           <div class="hero-wordmark">Kram Studios</div>
-
-          <!-- Hero text line (your “for the …” line) -->
           <div class="hero-tag">for the hugs, kisses, smiles &amp; overjoyed tears</div>
-
-          <!-- Small supporting line -->
-          <div class="hero-subline">Photography • Films • Based in VA — shoots anywhere in the US</div>
-
-          <p class="hero-lead">
-            Natural, people-first storytelling with clean portraits and real moments — captured calmly, honestly, and beautifully.
-          </p>
-
-          <div class="hero-actions">
-            <a class="hero-cta" href="contact.html">Contact</a>
-            <a class="hero-cta secondary" href="portfolio.html">Portfolio</a>
-          </div>
-
-          <a class="deep-dive" href="#showcase">Deep dive</a>
+          <div class="hero-subline">Photography • Films • Virginia-based, available nationwide</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO band between hero and showcase (moved text + buttons here) -->
+<section class="home-intro" aria-label="Intro">
+  <div class="container">
+    <div class="intro-wrap">
+      <div class="intro-text">
+        Natural, people-first storytelling with clean portraits and real moments — captured calmly, honestly, and beautifully.
+      </div>
+      <div class="intro-actions">
+        <a class="action-link" href="contact.html">Contact</a>
+        <a class="action-link secondary" href="portfolio.html">Portfolio</a>
+        <a class="action-link secondary" href="#showcase">Deep dive</a>
       </div>
     </div>
   </div>
@@ -70,34 +67,51 @@
 <section class="showcase" id="showcase" aria-label="Showcase">
   <div class="container">
     <div class="showcase-head">
-      <h2>The Showcase</h2>
-      <p class="muted">Sample images for now — full galleries next.</p>
+      <h2>A Small Selection</h2>
+      <p class="muted">A few frames to start — full galleries arriving soon.</p>
     </div>
 
     <div class="showcase-grid" id="showcaseGrid" aria-label="Showcase photos"></div>
   </div>
 </section>
 
-<!-- HOME STORY (simple, fluid) -->
+<!-- LUXURY STORY -->
 <section class="home-story" aria-label="Home story">
   <div class="container">
-    <div class="story-prose">
-      <p>
-        The best moments don’t announce themselves. A quiet tear. A hand squeeze. A laugh that takes over the room.
-        We look for the real connections — and we make sure you also get the clean portraits and group photos everyone wants.
-      </p>
-      <p>
-        We capture weddings, events, families, couples, and portraits with a simple approach: keep it natural, keep it honest,
-        and make it feel like you.
-      </p>
+    <div class="story-grid">
+      <div>
+        <h2 class="story-title">Photos that feel like being there again.</h2>
+        <div class="story-prose">
+          <p>
+            The day moves fast—overjoyed tears, loud laughter, quiet hand squeezes, a kiss you don’t even realize
+            someone saw. We don’t interrupt those moments. We anticipate them.
+          </p>
+          <p>
+            You’ll get the candid story as it unfolds, plus the clean portraits and group photos everyone hopes for—
+            flattering, effortless, and timeless.
+          </p>
+          <p>
+            The goal is simple: when you look back, you don’t just remember what it looked like—you remember what it felt like.
+          </p>
 
-      <div class="service-line"><b>Weddings</b> • Events • Family • Couples • Portraits</div>
-
-      <div style="margin-top:12px">
-        <a class="action-link" href="portfolio.html">View Portfolio</a>
-        <span style="display:inline-block;width:18px"></span>
-        <a class="action-link secondary" href="contact.html">Contact</a>
+          <div style="margin-top:12px">
+            <a class="action-link" href="portfolio.html">View Portfolio</a>
+            <span style="display:inline-block;width:18px"></span>
+            <a class="action-link secondary" href="contact.html">Contact</a>
+          </div>
+        </div>
       </div>
+
+      <aside class="story-aside" aria-label="Services">
+        <div class="aside-kicker">Services</div>
+        <ul class="aside-list">
+          <li><b>Weddings</b> — story + portraits, always</li>
+          <li><b>Events</b> — atmosphere, people, details</li>
+          <li><b>Families</b> — natural direction, real smiles</li>
+          <li><b>Couples</b> — candid + classic frames</li>
+          <li><b>Portraits</b> — clean, confident, you</li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
@@ -119,7 +133,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Build the "Showcase" from the hero carousel list (first 9)
-  // hero-carousel.js will set window.KRAM_HERO_LIST = [{src, alt}, ...]
+  // hero-carousel.js will set window.KRAM_HERO_LIST = [{src, thumb, alt}, ...]
   (function buildShowcase(){
     const grid = document.getElementById('showcaseGrid');
     if (!grid) return;
