@@ -540,3 +540,43 @@ button:hover{opacity:.9}
 .masonry-featured .m-item{
   margin-bottom: 14px;
 }
+
+
+/* Home Flow Grid (more fluid, less column-y) */
+.flow-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items:start;
+}
+
+.flow-grid .info-block{
+  max-width: 92ch;
+}
+
+.flow-grid .info-block h3{
+  font-size: 1.65rem;
+}
+
+.flow-grid .info-block p{
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+/* Make the offerings list feel like a paragraph flow */
+.flow-grid .list-inline{
+  gap: 8px 16px;
+  font-size: 0.98rem;
+}
+
+/* Home section title soften */
+.section-title{
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.section-title h2{
+  line-height: 1.1;
+}
+.flow-grid .info-block p{
+  color: var(--muted);
+}
