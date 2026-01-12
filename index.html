@@ -52,7 +52,7 @@
   <div class="container">
     <div class="intro-wrap">
       <div class="intro-text">
-        Natural, people-first storytelling with clean portraits and real moments — captured calmly, honestly, and beautifully.
+        Natural, people-first storytelling with clean portraits and real moments - captured calmly, honestly, and beautifully.
       </div>
       <div class="intro-actions">
         <a class="action-link" href="contact.html">Contact</a>
@@ -132,48 +132,102 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Build the "Showcase" from the hero carousel list (first 9)
-  // hero-carousel.js will set window.KRAM_HERO_LIST = [{src, thumb, alt}, ...]
-  (function buildShowcase(){
+  function normalizeLine(s){ return (s || "").trim(); }
+  function isCommentOrEmpty(s){ return !s || s.startsWith("#") || s.startsWith("//"); }
+  function basename(p){ return (p || "").split("/").pop(); }
+
+  async function readLines(url){
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+    const txt = await res.text();
+    return txt.split(/\r?\n/).map(normalizeLine).filter(s => !isCommentOrEmpty(s));
+  }
+
+  function buildBasenameMap(photos){
+    const m = new Map();
+    photos.forEach(p => {
+      if (!p?.src) return;
+      m.set(basename(p.src).toLowerCase(), p);
+    });
+    return m;
+  }
+
+  function toPhotoObj(resolved){
+    if (!resolved) return null;
+
+    if (typeof resolved === "string"){
+      const src = resolved;
+      const thumb = src.includes("/gallery/full/")
+        ? src.replace("/gallery/full/", "/gallery/thumb/")
+        : src;
+      return { src, thumb, alt: "Kram Studios" };
+    }
+
+    return {
+      src: resolved.src,
+      thumb: resolved.thumb || resolved.src,
+      alt: resolved.alt || "Kram Studios"
+    };
+  }
+
+  // ✅ Build the Showcase from featured.txt (first 9)
+  (async function buildShowcaseFromFeatured(){
     const grid = document.getElementById('showcaseGrid');
     if (!grid) return;
 
-    function render(list){
-      if (!Array.isArray(list) || list.length === 0) return;
-      const take = list.slice(0, 9);
-
-      grid.innerHTML = '';
-      take.forEach((p) => {
-        const a = document.createElement('a');
-        a.className = 'showcase-item';
-        a.href = 'portfolio.html';
-
-        const img = document.createElement('img');
-        img.loading = 'lazy';
-        img.src = p.thumb || p.src;
-        img.alt = p.alt || 'Kram Studios';
-
-        a.appendChild(img);
-        grid.appendChild(a);
-      });
-    }
-
-    // If hero list is already ready
-    if (window.KRAM_HERO_LIST && window.KRAM_HERO_LIST.length) {
-      render(window.KRAM_HERO_LIST);
+    let gallery;
+    try {
+      const res = await fetch("gallery.json", { cache: "no-store" });
+      gallery = await res.json();
+    } catch (e) {
+      console.warn("Could not load gallery.json", e);
       return;
     }
 
-    // Otherwise wait briefly for hero-carousel.js to load
-    let tries = 0;
-    const t = setInterval(() => {
-      tries++;
-      if (window.KRAM_HERO_LIST && window.KRAM_HERO_LIST.length) {
-        clearInterval(t);
-        render(window.KRAM_HERO_LIST);
+    const allPhotos = [];
+    (gallery?.categories || []).forEach(cat => {
+      (cat?.photos || []).forEach(p => allPhotos.push(p));
+    });
+
+    const fallbackPhotos = (gallery?.categories?.[0]?.photos || []);
+    const bmap = buildBasenameMap(allPhotos.length ? allPhotos : fallbackPhotos);
+
+    let lines = [];
+    try {
+      lines = await readLines("featured.txt");
+    } catch (e) {
+      console.warn("featured.txt missing; falling back to first gallery photos");
+      lines = (fallbackPhotos.slice(0, 9).map(p => p?.src)).filter(Boolean);
+    }
+
+    const picks = [];
+    lines.forEach(line => {
+      if (line.includes("/")) {
+        picks.push(toPhotoObj(line));
+      } else {
+        const resolved = bmap.get(line.toLowerCase());
+        if (resolved) picks.push(toPhotoObj(resolved));
+        else console.warn("featured.txt item not found in gallery.json:", line);
       }
-      if (tries > 40) clearInterval(t); // ~2s max
-    }, 50);
+    });
+
+    const take = picks.filter(Boolean).slice(0, 9);
+    if (!take.length) return;
+
+    grid.innerHTML = "";
+    take.forEach((p) => {
+      const a = document.createElement("a");
+      a.className = "showcase-item";
+      a.href = "portfolio.html";
+
+      const img = document.createElement("img");
+      img.loading = "lazy";
+      img.src = p.thumb || p.src;
+      img.alt = p.alt || "Kram Studios";
+
+      a.appendChild(img);
+      grid.appendChild(a);
+    });
   })();
 </script>
 
