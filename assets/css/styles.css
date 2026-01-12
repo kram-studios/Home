@@ -204,13 +204,35 @@ a:hover{opacity:.92}
 }
 
 /* OPTIONAL (most reliable): glass plate behind text */
+/* Keep hero text ON the image, centered */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+  text-align:center;
+}
+.hero-overlay .container{width:100%}
+
 .hero-overlay-inner{
-  padding: 26px 26px;
-  border-radius: 18px;
-  background: rgba(0,0,0,.26);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.14);
+  pointer-events:auto;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+
+  /* IMPORTANT: no overlay box */
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 
