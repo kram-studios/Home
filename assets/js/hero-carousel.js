@@ -1,9 +1,10 @@
 /**
- * Hero Carousel v7 (Wheel/Coverflow)
+ * Hero Carousel (Single Image, Fullscreen, No Crop)
  * - Reads carousel.txt (one filename or path per line); auto-count = number of lines
  * - If a line is just a filename, it is matched against gallery.json by basename
- * - Main image is large; prev/next are small with ~50% transparency
+ * - Renders ONLY the active image (no prev/next peek)
  * - Exposes window.KRAM_HERO_LIST = [{src, thumb, alt}] so Home can build Showcase (9)
+ * - Autoplays every 3 seconds; stops after user interaction
  */
 function $(sel, el = document) { return el.querySelector(sel); }
 
@@ -30,22 +31,23 @@ async function readLines(url){
 }
 
 function toPhotoObjFromResolved(resolved){
-  // resolved can be either a string path or a photo object
   if (!resolved) return null;
+
+  // resolved can be either a string path or a photo object
   if (typeof resolved === "string"){
     const src = resolved;
-    // best-effort thumb inference if it’s under assets/gallery/full/
     const file = basename(src);
     const thumb = src.includes("/gallery/full/")
       ? src.replace("/gallery/full/", "/gallery/thumb/")
       : src;
-    return { src, thumb, alt: "Kram Studios" };
+    return { src, thumb, alt: "Kram Studios", _file: file };
   }
-  // photo object from gallery.json
+
   return {
     src: resolved.src,
     thumb: resolved.thumb || resolved.src,
-    alt: resolved.alt || "Kram Studios"
+    alt: resolved.alt || "Kram Studios",
+    _file: basename(resolved.src)
   };
 }
 
@@ -78,7 +80,6 @@ async function initHeroWheel(){
   try {
     lines = await readLines("carousel.txt");
   } catch (e) {
-    // fallback to some gallery photos if carousel.txt missing
     lines = (fallbackPhotos.slice(0, 7).map(p => p?.src)).filter(Boolean);
   }
 
@@ -86,7 +87,6 @@ async function initHeroWheel(){
   const picksObj = [];
   lines.forEach(line => {
     if (line.includes("/")) {
-      // treat as a direct path
       picksObj.push(toPhotoObjFromResolved(line));
     } else {
       const resolved = bmap.get(line.toLowerCase()); // photo obj
@@ -108,37 +108,20 @@ async function initHeroWheel(){
 
   function render(){
     wheel.innerHTML = "";
+    const p = picks[active];
 
-    const idxActive = active;
-    const idxPrev   = mod(active - 1, n);
-    const idxNext   = mod(active + 1, n);
-    const idxPrev2  = mod(active - 2, n);
-    const idxNext2  = mod(active + 2, n);
-
-    function addCard(i, cls){
-      const p = picks[i];
-      const d = document.createElement("div");
-      d.className = `hero-card ${cls}`;
-      d.innerHTML = `<img src="${p.src}" alt="${p.alt || `Kram Studios carousel ${i+1}`}" loading="${cls==='is-active'?'eager':'lazy'}">`;
-      d.addEventListener("click", () => {
-        active = i;
-        render();
-      });
-      wheel.appendChild(d);
-    }
-
-    addCard(idxPrev2, "is-prev2");
-    addCard(idxNext2, "is-next2");
-    addCard(idxPrev,  "is-prev");
-    addCard(idxNext,  "is-next");
-    addCard(idxActive,"is-active");
+    const d = document.createElement("div");
+    d.className = "hero-card is-active";
+    d.innerHTML = `<img src="${p.src}" alt="${p.alt || `Kram Studios carousel ${active+1}`}" loading="eager">`;
+    wheel.appendChild(d);
   }
 
   function prev(){ active = mod(active - 1, n); render(); }
   function next(){ active = mod(active + 1, n); render(); }
 
-  $("[data-hero-prev]")?.addEventListener("click", prev);
-  $("[data-hero-next]")?.addEventListener("click", next);
+  // Nav buttons (only show on hover via CSS). If you remove buttons from HTML, these safely no-op.
+  $("[data-hero-prev]")?.addEventListener("click", (e) => { e.preventDefault(); prev(); });
+  $("[data-hero-next]")?.addEventListener("click", (e) => { e.preventDefault(); next(); });
 
   wheel.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prev();
@@ -147,7 +130,7 @@ async function initHeroWheel(){
 
   // autoplay; stops after user interaction
   let autoplay = true;
-  setInterval(() => { if (autoplay) next(); }, 3000);
+  const timer = setInterval(() => { if (autoplay) next(); }, 3000);
 
   ["mousedown","touchstart","wheel"].forEach(evt => {
     wheel.addEventListener(evt, () => { autoplay = false; }, { passive: true });
