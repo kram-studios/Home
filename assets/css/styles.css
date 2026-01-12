@@ -374,8 +374,9 @@ a:hover{opacity:.92}
 
 .showcase-grid{
   display:grid;
-  grid-template-columns: repeat(12, 1fr); /* ✅ more per row */
-  gap: 12px; /* ✅ slightly tighter */
+  grid-template-columns: repeat(8, 1fr); /* ✅ more per row */
+
+  gap: 8px; /* ✅ slightly tighter */
 }
 
 @media (max-width: 1100px){
