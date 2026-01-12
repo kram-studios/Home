@@ -244,7 +244,7 @@ a:hover{opacity:.92}
 
 /* Big tagline */
 .intro-title{
-  font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+  font-family: "Great Vibes", cursive;
   font-weight: 700;
   font-size: clamp(2.2rem, 4.2vw, 3.6rem);
   line-height: 1.05;
@@ -254,9 +254,9 @@ a:hover{opacity:.92}
   margin: 0;
 }
 
-/* Calligraphy quote */
+/* Calligraphy quote Great Vibes*/
 .intro-quote{
-  font-family: "Great Vibes", cursive;
+  font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 1.25;
   letter-spacing: .01em;
