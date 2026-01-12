@@ -340,6 +340,7 @@ button:hover{opacity:.9}
 .featured-item{
   cursor:pointer;
 }
+/* FIX: never shrink featured images */
 .featured-item img{width:100%;height:auto;object-fit:cover;display:block;}
 @media (max-width: 920px){ .featured-item img{height:auto} }
 
@@ -540,6 +541,8 @@ button:hover{opacity:.9}
 .masonry-featured .m-item{
   margin-bottom: 14px;
 }
+/* Safety: if featured items still render with old class, don't shrink */
+.masonry-featured .featured-item img{width:100% !important;}
 
 
 /* Home Flow Grid (more fluid, less column-y) */
@@ -561,6 +564,7 @@ button:hover{opacity:.9}
 .flow-grid .info-block p{
   font-size: 1.02rem;
   line-height: 1.75;
+  color: var(--muted);
 }
 
 /* Make the offerings list feel like a paragraph flow */
@@ -576,7 +580,4 @@ button:hover{opacity:.9}
 }
 .section-title h2{
   line-height: 1.1;
-}
-.flow-grid .info-block p{
-  color: var(--muted);
 }
