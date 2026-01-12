@@ -372,7 +372,7 @@ a:hover{opacity:.92}
 
 .showcase-grid{
   display:grid;
-  grid-template-columns: repeat(8, 1fr); /* ✅ more per row */
+  grid-template-columns: repeat(12, 1fr); /* ✅ more per row */
   gap: 12px; /* ✅ slightly tighter */
 }
 
