@@ -211,7 +211,7 @@
       }
     });
 
-    const take = picks.filter(Boolean).slice(0, 9);
+    const take = picks.filter(Boolean);
     if (!take.length) return;
 
     grid.innerHTML = "";
