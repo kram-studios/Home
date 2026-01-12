@@ -26,15 +26,13 @@
   </div>
 </div>
 
-<!-- HOME HERO (full screen, no crop, text only) -->
+<!-- HOME HERO -->
 <section class="home-hero" aria-label="Home hero">
   <div class="hero-stage">
     <div class="hero-carousel" aria-label="Featured photos wheel">
       <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
-      <!-- no hero buttons -->
     </div>
 
-    <!-- Overlay copy (ONLY these 3 lines) -->
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-overlay-inner">
@@ -47,7 +45,7 @@
   </div>
 </section>
 
-<!-- INTRO band between hero and showcase (moved text + buttons here) -->
+<!-- INTRO band -->
 <section class="home-intro" aria-label="Intro">
   <div class="container">
     <div class="intro-wrap">
@@ -71,7 +69,11 @@
       <p class="muted">A few frames to start — full galleries arriving soon.</p>
     </div>
 
-    <div class="showcase-grid" id="showcaseGrid" aria-label="Showcase photos"></div>
+    <div class="showcase-carousel" aria-label="Showcase carousel">
+      <button class="showcase-nav prev" type="button" aria-label="Scroll left">‹</button>
+      <div class="showcase-track" id="showcaseTrack" aria-label="Showcase photos"></div>
+      <button class="showcase-nav next" type="button" aria-label="Scroll right">›</button>
+    </div>
   </div>
 </section>
 
@@ -170,10 +172,10 @@
     };
   }
 
-  // ✅ Build the Showcase from featured.txt (first 9)
+  // ✅ Showcase carousel: ALL images from featured.txt
   (async function buildShowcaseFromFeatured(){
-    const grid = document.getElementById('showcaseGrid');
-    if (!grid) return;
+    const track = document.getElementById('showcaseTrack');
+    if (!track) return;
 
     let gallery;
     try {
@@ -197,7 +199,7 @@
       lines = await readLines("featured.txt");
     } catch (e) {
       console.warn("featured.txt missing; falling back to first gallery photos");
-      lines = (fallbackPhotos.slice(0, 9).map(p => p?.src)).filter(Boolean);
+      lines = (fallbackPhotos.map(p => p?.src)).filter(Boolean);
     }
 
     const picks = [];
@@ -211,23 +213,44 @@
       }
     });
 
-    const take = picks.filter(Boolean);
-    if (!take.length) return;
+    const list = picks.filter(Boolean);
+    if (!list.length) return;
 
-    grid.innerHTML = "";
-    take.forEach((p) => {
+    track.innerHTML = "";
+    list.forEach((p) => {
       const a = document.createElement("a");
       a.className = "showcase-item";
       a.href = "portfolio.html";
 
       const img = document.createElement("img");
       img.loading = "lazy";
+      img.decoding = "async";
       img.src = p.thumb || p.src;
       img.alt = p.alt || "Kram Studios";
 
       a.appendChild(img);
-      grid.appendChild(a);
+      track.appendChild(a);
     });
+
+    // Buttons scroll by ~one screen
+    const wrap = track.closest(".showcase-carousel");
+    const prevBtn = wrap?.querySelector(".showcase-nav.prev");
+    const nextBtn = wrap?.querySelector(".showcase-nav.next");
+
+    function scrollByPage(dir){
+      const amount = Math.max(240, Math.floor(track.clientWidth * 0.92));
+      track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    }
+
+    prevBtn?.addEventListener("click", () => scrollByPage(-1));
+    nextBtn?.addEventListener("click", () => scrollByPage(1));
+
+    // Shift+wheel = horizontal scroll (desktop nicety)
+    track.addEventListener("wheel", (e) => {
+      if (!e.shiftKey) return;
+      e.preventDefault();
+      track.scrollLeft += e.deltaY;
+    }, { passive: false });
   })();
 </script>
 
