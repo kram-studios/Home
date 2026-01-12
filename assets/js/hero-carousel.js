@@ -156,60 +156,7 @@ async function initHeroWheel(){
   render();
 }
 
-
-function initHeroScrollReveal(){
-  const section = document.querySelector(".home-hero");
-  const stage = document.querySelector(".home-hero .hero-stage");
-  if (!section || !stage) return;
-
-  // Respect reduced motion
-  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) return;
-
-  let ticking = false;
-
-  function clamp01(x){ return Math.max(0, Math.min(1, x)); }
-
-  function update(){
-    ticking = false;
-
-    const rect = section.getBoundingClientRect();
-    const vh = window.innerHeight || 800;
-
-    // progress: 0 when hero top hits viewport, 1 when you reach near the end of the hero section
-    // We use section height minus the pinned stage height to define the scroll range.
-    const stageH = stage.getBoundingClientRect().height;
-    const scrollRange = Math.max(1, section.offsetHeight - stageH);
-
-    // How far we've scrolled through the section:
-    // rect.top goes from 0 -> negative as you scroll down
-    const scrolled = clamp01((-rect.top) / scrollRange);
-
-    // Tune these:
-    const scale = 1 + (0.08 * scrolled);      // 1.00 -> 1.08
-    const y = -12 * scrolled;                 // 0px -> -12px (subtle parallax)
-    const fade = 1 - (0.85 * scrolled);       // 1 -> 0.15
-
-    document.documentElement.style.setProperty("--heroScale", scale.toFixed(4));
-    document.documentElement.style.setProperty("--heroY", `${y.toFixed(2)}px`);
-    document.documentElement.style.setProperty("--overlayFade", fade.toFixed(4));
-  }
-
-  function onScroll(){
-    if (!ticking){
-      ticking = true;
-      requestAnimationFrame(update);
-    }
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll, { passive: true });
-  update();
-}
-
-
 document.addEventListener("DOMContentLoaded", () => {
   initHeroWheel();
-  initHeroScrollReveal();
 });
 

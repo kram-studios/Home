@@ -296,61 +296,6 @@ a:hover{opacity:.92}
   background:#0b0b0b;      /* letterbox fill */
 }
 
-/* =========================
-   Scroll Reveal Hero (sticky)
-   ========================= */
-
-/* Ensure nav height is consistent (adjust if your nav is taller) */
-:root{
-  --navH: 72px;
-  --heroScale: 1;
-  --heroY: 0px;
-  --overlayFade: 1;
-}
-
-/* Make the HOME hero section taller so scroll has "room" to reveal */
-.home-hero{
-  padding: 0;
-  margin: 0;
-  min-height: 180vh; /* controls how long the hero stays pinned */
-}
-
-/* Pin the hero while scrolling through the first part */
-.home-hero .hero-stage{
-  position: sticky;
-  top: var(--navH);
-  height: calc(100vh - var(--navH));
-  min-height: 520px;
-  overflow: hidden;
-}
-
-/* Make sure the wheel fills the pinned hero area */
-.home-hero .hero-carousel,
-.home-hero .hero-wheel{
-  height: 100%;
-}
-
-/* Animate the hero image container (smooth zoom/parallax) */
-.home-hero .hero-wheel{
-  transform: translateY(var(--heroY)) scale(var(--heroScale));
-  will-change: transform;
-}
-
-/* Fade the overlay as you scroll (optional but feels premium) */
-.home-hero .hero-overlay{
-  opacity: var(--overlayFade);
-  transition: opacity .12s linear;
-}
-
-/* If you want text always readable, keep your gradient overlay (you already have ::after) */
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .home-hero .hero-wheel{ transform: none !important; }
-  .home-hero .hero-overlay{ opacity: 1 !important; }
-}
-
-
 
 /* Make "peek" classes harmless if they exist */
 .hero-card.is-prev,
