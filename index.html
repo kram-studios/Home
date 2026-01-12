@@ -8,9 +8,16 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Your main fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Calligraphy font for the quote -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
+
 <body>
 <div class="nav">
   <div class="container nav-inner">
@@ -33,13 +40,14 @@
       <div class="hero-wheel" id="heroWheel" tabindex="0"></div>
     </div>
 
-    <!-- Overlay copy -->
+    <!-- Overlay copy (ONLY 3 lines) -->
     <div class="hero-overlay">
       <div class="container">
         <div class="hero-overlay-inner">
           <div class="hero-wordmark">KRAM STUDIOS</div>
           <div class="hero-tag">for the hugs, kisses, smiles &amp; overjoyed tears</div>
           <div class="hero-subline">Photography • Films • Virginia-based, available nationwide</div>
+          <a class="action-link secondary" href="#home-intro">Learn More</a>
         </div>
       </div>
     </div>
@@ -50,8 +58,21 @@
 <section class="home-intro" aria-label="Intro">
   <div class="container">
     <div class="intro-wrap">
-      <div class="intro-text">
+
+      <!-- BIG tagline -->
+      <div class="intro-title">
+        Cherish Now. Relive Forever.
+      </div>
+
+      <!-- Calligraphy quote -->
+      <div class="intro-quote">
         when you look back, you don’t just remember what it looked like - you remember what it felt like.
+      </div>
+
+      <!-- Buttons under text -->
+      <div class="intro-actions">
+        <a class="action-link" href="contact.html">Contact</a>
+        <a class="action-link secondary" href="portfolio.html">Portfolio</a>
       </div>
 
     </div>
@@ -61,23 +82,15 @@
 <!-- SHOWCASE -->
 <section class="showcase" id="showcase" aria-label="Showcase">
   <div class="container">
-    <div class="showcase-head">
-    </div>
+    <div class="showcase-head"></div>
   </div>
 
-  <!-- Full-bleed carousel like CatchMotion -->
+  <!-- Full-bleed carousel -->
   <div class="showcase-carousel" aria-label="Showcase carousel">
     <button class="showcase-nav prev" type="button" aria-label="Scroll left">‹</button>
-
     <div class="showcase-track" id="showcaseTrack" aria-label="Showcase photos"></div>
-
     <button class="showcase-nav next" type="button" aria-label="Scroll right">›</button>
   </div>
-  <div class="intro-actions">
-        <a class="action-link" href="contact.html">Contact</a>
-        <a class="action-link secondary" href="portfolio.html">Portfolio</a>
-        <a class="action-link secondary" href="#showcase">Deep dive</a>
-      </div>
 </section>
 
 <div class="footer">
@@ -97,7 +110,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // ----------------------------
-  // Showcase: build from featured.txt (ALL items), keep portrait/landscape naturally
+  // Showcase: build from featured.txt (ALL items)
   // ----------------------------
   function normalizeLine(s){ return (s || "").trim(); }
   function isCommentOrEmpty(s){ return !s || s.startsWith("#") || s.startsWith("//"); }
@@ -141,7 +154,6 @@
     const track = document.getElementById('showcaseTrack');
     if (!track) return;
 
-    // arrows
     const prevBtn = document.querySelector('.showcase-nav.prev');
     const nextBtn = document.querySelector('.showcase-nav.next');
 
@@ -152,7 +164,7 @@
     prevBtn?.addEventListener('click', () => scrollByAmount(-1));
     nextBtn?.addEventListener('click', () => scrollByAmount( 1));
 
-    // optional: drag-to-scroll (desktop)
+    // drag-to-scroll (desktop)
     let isDown = false, startX = 0, startLeft = 0;
     track.addEventListener('mousedown', (e) => {
       isDown = true;

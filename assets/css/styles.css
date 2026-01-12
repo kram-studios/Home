@@ -230,23 +230,42 @@ a:hover{opacity:.92}
    INTRO band (center + buttons under)
    ------------------------- */
 .home-intro{
-  padding: 34px 0 12px;
+  padding: 42px 0 18px;
   text-align:center;
 }
+
 .intro-wrap{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap: 16px;
+  gap: 14px;
 }
-.intro-text{
-  max-width: 78ch;
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
+
+/* Big tagline */
+.intro-title{
+  font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Calligraphy quote */
+.intro-quote{
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.25;
+  letter-spacing: .01em;
+  color: var(--text);
+  max-width: 70ch;
   margin: 0 auto;
 }
+
+/* Buttons */
 .intro-actions{
   display:flex;
   flex-direction:column;
@@ -254,14 +273,18 @@ a:hover{opacity:.92}
   align-items:center;
   justify-content:center;
   width:100%;
+  margin-top: 6px;
 }
+
 .intro-actions .action-link{
   min-width: 220px;
 }
+
 @media (min-width: 820px){
   .intro-actions{ flex-direction:row; gap: 16px; }
   .intro-actions .action-link{ min-width: 180px; }
 }
+
 
 /* -------------------------
    SHOWCASE (CatchMotion-style filmstrip)
