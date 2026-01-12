@@ -78,166 +78,6 @@ a:hover{opacity:.92}
    ------------------------- */
 
 /* Stage wraps hero (wheel) + overlay copy */
-.home-hero{
-  padding: 18px 0 10px;
-}
-.hero-stage{
-  position:relative;
-  width:100%;
-}
-
-/* Gradient for readability over images */
-.hero-stage::after{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.62) 0%,
-    rgba(0,0,0,.22) 38%,
-    rgba(0,0,0,.00) 72%
-  );
-  pointer-events:none;
-}
-
-/* Overlay copy */
-.hero-overlay{
-  position:absolute;
-  left:0; right:0; bottom:0;
-  z-index:10;
-  pointer-events:none;
-}
-.hero-overlay-inner{
-  pointer-events:auto;
-  padding: 28px 0 18px;
-  color:#fff;
-  max-width: 760px;
-}
-
-.hero-wordmark{
-  font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
-  font-weight:600;
-  letter-spacing:.04em;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  line-height: 1.02;
-}
-
-.hero-tag{
-  margin-top: 10px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-size:.78rem;
-  color: rgba(255,255,255,.88);
-}
-
-.hero-subline{
-  margin-top: 6px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:.82rem;
-  color: rgba(255,255,255,.78);
-}
-
-.hero-lead{
-  margin: 14px 0 0;
-  color: rgba(255,255,255,.86);
-  font-size: 1.02rem;
-  max-width: 72ch;
-}
-
-.hero-actions{
-  display:flex; gap:18px; flex-wrap:wrap;
-  margin-top: 12px;
-  align-items:center;
-}
-
-.hero-cta{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,.92);
-  font-size:.95rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.hero-cta.secondary{
-  border-bottom-color: rgba(255,255,255,.55);
-  color: rgba(255,255,255,.78);
-}
-.hero-cta.secondary:hover{color:#fff;border-bottom-color:#fff}
-
-.deep-dive{
-  display:inline-flex;
-  margin-top: 12px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-size:.82rem;
-  color: rgba(255,255,255,.86);
-  border-bottom: 1px solid rgba(255,255,255,.65);
-  padding-bottom: 6px;
-}
-
-/* Showcase below hero */
-.showcase{
-  padding: 34px 0 10px;
-}
-.showcase-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-.showcase-head h2{
-  font-size: 2.0rem;
-}
-.showcase-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-@media (max-width: 920px){
-  .showcase-grid{grid-template-columns: repeat(2, 1fr);}
-}
-@media (max-width: 520px){
-  .showcase-grid{grid-template-columns: 1fr;}
-}
-.showcase-item{
-  display:block;
-  cursor:pointer;
-}
-.showcase-item img{
-  width:100%;
-  height: 320px;
-  object-fit: cover;
-  display:block;
-  transition: opacity .25s ease;
-}
-.showcase-item:hover img{opacity:.92}
-@media (max-width: 920px){
-  .showcase-item img{height:260px}
-}
-
-/* Simple info flow (home body) */
-.home-story{
-  padding: 26px 0 6px;
-}
-.story-prose{
-  max-width: 86ch;
-}
-.story-prose p{margin:0 0 14px;color:var(--muted)}
-.story-prose p:last-child{margin-bottom:0}
-.service-line{
-  margin-top: 12px;
-  color: var(--muted);
-  letter-spacing:.08em;
-}
-.service-line b{color:var(--text); font-weight:600}
-
-/* -------------------------
-   HERO Wheel (SINGLE full-screen, no crop)
-   ------------------------- */
-
-/* Full-screen hero */
 .home-hero{padding:0;margin:0}
 .home-hero .container{max-width: var(--max);}
 
@@ -267,13 +107,8 @@ a:hover{opacity:.92}
   position:relative;
   width:100%;
   margin: 0;
-  overflow: hidden;
-  background: #000;
-}
-
-/* IMPORTANT: do not crop hero images */
-.home-hero .hero-wheel{
-  background:#0b0b0b;
+  overflow:hidden;
+  background:#000; /* prevents white flash while loading */
 }
 
 /* Render ONLY one hero card, full bleed */
@@ -290,12 +125,11 @@ a:hover{opacity:.92}
 .hero-card img{
   width:100%;
   height:100%;
-  object-fit: cover;     /* <-- NO CROP */
+  object-fit: cover;          /* CROPPED to fill (no margins) */
   object-position:center 35%;
   display:block;
-  background:#0b0b0b;      /* letterbox fill */
+  background:#0b0b0b;
 }
-
 
 /* Make "peek" classes harmless if they exist */
 .hero-card.is-prev,
@@ -312,36 +146,111 @@ a:hover{opacity:.92}
   inset:0;
   pointer-events:none;
   background:
-    radial-gradient(900px 520px at 18% 80%, rgba(0,0,0,.52), rgba(0,0,0,0) 60%),
-    linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%);
+    radial-gradient(900px 520px at 50% 55%, rgba(0,0,0,.28), rgba(0,0,0,0) 60%),
+    linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0) 58%);
 }
 
-/* Hero overlay (keep readable) */
+/* ---- HERO TEXT: centered + aligned + luxury wordmark ---- */
 .hero-overlay{
   position:absolute;
   inset:0;
-  display:flex;
-  align-items:flex-end;
   z-index:10;
+
+  display:flex;
+  align-items:center;      /* vertical center */
+  justify-content:center;  /* horizontal center */
+
   pointer-events:none;
+  text-align:center;
 }
+.hero-overlay .container{width:100%}
+
 .hero-overlay-inner{
   pointer-events:auto;
-  padding: 0 0 44px;
-  max-width: 820px;
-}
-.hero-wordmark{
-  color: rgba(255,255,255,.98);
-  text-shadow: 0 12px 34px rgba(0,0,0,.55);
-}
-.hero-tag{
-  text-shadow: 0 10px 26px rgba(0,0,0,.55);
-}
-.hero-subline{
-  text-shadow: 0 10px 26px rgba(0,0,0,.55);
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 10px;
+
+  color:#fff;
 }
 
-/* Nav buttons: hidden, appear on hover (immersed in image) */
+.hero-wordmark{
+  font-family:"Cormorant Garamond", ui-serif, Georgia, serif;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  line-height:1.05;
+
+  color: rgba(255,255,255,.98);
+  text-shadow: 0 14px 40px rgba(0,0,0,.60);
+}
+
+.hero-tag{
+  margin:0;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-size:.82rem;
+  color: rgba(255,255,255,.90);
+  text-shadow: 0 12px 30px rgba(0,0,0,.60);
+}
+
+.hero-subline{
+  margin:0;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.88rem;
+  color: rgba(255,255,255,.80);
+  text-shadow: 0 12px 30px rgba(0,0,0,.60);
+  max-width: 80ch;
+}
+
+/* If hero-lead/actions exist in HTML, keep them tidy */
+.hero-lead{
+  margin: 14px 0 0;
+  color: rgba(255,255,255,.86);
+  font-size: 1.02rem;
+  max-width: 72ch;
+  text-shadow: 0 12px 30px rgba(0,0,0,.60);
+}
+.hero-actions{
+  display:flex; gap:18px; flex-wrap:wrap;
+  margin-top: 12px;
+  align-items:center;
+  justify-content:center;
+}
+.hero-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.92);
+  font-size:.95rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.hero-cta.secondary{
+  border-bottom-color: rgba(255,255,255,.55);
+  color: rgba(255,255,255,.78);
+}
+.hero-cta.secondary:hover{color:#fff;border-bottom-color:#fff}
+.deep-dive{
+  display:inline-flex;
+  margin-top: 12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.82rem;
+  color: rgba(255,255,255,.86);
+  border-bottom: 1px solid rgba(255,255,255,.65);
+  padding-bottom: 6px;
+}
+
+/* Nav buttons: immersed, hidden; appear on hover/focus */
 .hero-nav{
   position:absolute;
   inset:0;
@@ -370,6 +279,65 @@ a:hover{opacity:.92}
 .hero-btn:hover{background: rgba(0,0,0,.42)}
 .hero-btn.prev{left:16px}
 .hero-btn.next{right:16px}
+
+/* -------------------------
+   SHOWCASE
+   ------------------------- */
+.showcase{
+  padding: 34px 0 10px;
+}
+.showcase-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.showcase-head h2{font-size:2.0rem}
+
+.showcase-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 920px){
+  .showcase-grid{grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 520px){
+  .showcase-grid{grid-template-columns: 1fr;}
+}
+
+.showcase-item{display:block;cursor:pointer}
+.showcase-item img{
+  width:100%;
+  height: 320px;
+  object-fit: cover;
+  display:block;
+  transition: opacity .25s ease;
+}
+.showcase-item:hover img{opacity:.92}
+@media (max-width: 920px){
+  .showcase-item img{height:260px}
+}
+
+/* -------------------------
+   HOME STORY (simple)
+   ------------------------- */
+.home-story{
+  padding: 26px 0 6px;
+}
+.story-prose{
+  max-width: 86ch;
+}
+.story-prose p{margin:0 0 14px;color:var(--muted)}
+.story-prose p:last-child{margin-bottom:0}
+.service-line{
+  margin-top: 12px;
+  color: var(--muted);
+  letter-spacing:.08em;
+}
+.service-line b{color:var(--text); font-weight:600}
 
 /* -------------------------
    Portfolio masonry
