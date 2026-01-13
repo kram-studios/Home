@@ -245,9 +245,10 @@ a:hover{opacity:.92}
 /* Big tagline */
 .intro-title{
   font-family: "Great Vibes", cursive;
-  font-weight: 700;
+  font-weight: 650;
   font-size: clamp(2.0rem, 3.6vw, 3.2rem);
   line-height: 1.05;
+  opacity: .92;       /* slightly softer */
   letter-spacing: .08em;
   color: var(--text);
   margin: 0;
@@ -257,6 +258,8 @@ a:hover{opacity:.92}
 .intro-quote{
   font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
   font-size: clamp(1rem, 2vw, 1.8rem);
+  font-weight: 400;     /* normal */
+  opacity: .92;       
   line-height: 1.25;
   letter-spacing: .01em;
   color: var(--text);
